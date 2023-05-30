@@ -1,0 +1,28 @@
+{% load wagtailcore_tags %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+        <title>Hello, world!</title>
+    </head>
+    <body>
+        <main class="container">
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.plot|richtext }}</p>
+            <ul>
+                <li>Released: {{ page.release_year }}</li>
+                <li>Director: {{ page.director }}</li>
+                <li>Wiki page: {{ page.wiki_page }}</li>
+            </ul>
+            <h2>Other films from {{ page.release_year }}:</h2>
+            <ul>
+                {% for film in related_films %}
+                    <li><a href="{{ film.url }}">{{ film.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </main>
+    </body>
+</html>

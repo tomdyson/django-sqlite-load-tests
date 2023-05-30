@@ -1,0 +1,10 @@
+ignore/
+venv/
+db.sqlite3
+db.sqlite3-*
+films.json.gz
+wiki_movie_plots_deduped.csv
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class

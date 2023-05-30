@@ -1,0 +1,6 @@
+fly.toml
+.git/
+*.sqlite3
+ignore/
+films.json
+db.sqlite3
